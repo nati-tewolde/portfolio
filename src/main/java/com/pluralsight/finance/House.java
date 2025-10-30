@@ -1,4 +1,4 @@
-package com.pluralsight.classes;
+package com.pluralsight.finance;
 
 import java.time.LocalDate;
 
@@ -8,7 +8,7 @@ public class House extends FixedAsset {
     private int bedrooms;
 
     public House(String name, double value, int yearBuilt, int squareFeet, int bedrooms) {
-        super(name, value);
+        super("House", 0);
         this.yearBuilt = yearBuilt;
         this.squareFeet = squareFeet;
         this.bedrooms = bedrooms;

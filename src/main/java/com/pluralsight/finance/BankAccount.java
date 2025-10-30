@@ -1,8 +1,6 @@
-package com.pluralsight.classes;
+package com.pluralsight.finance;
 
-import com.pluralsight.interfaces.IValuable;
-
-public class BankAccount implements IValuable {
+public class BankAccount implements Valuable {
     private String name;
     private String accountNumber;
     private double balance;

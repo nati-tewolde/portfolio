@@ -1,8 +1,6 @@
-package com.pluralsight.classes;
+package com.pluralsight.finance;
 
-import com.pluralsight.interfaces.IValuable;
-
-public class CreditCard implements IValuable {
+public class CreditCard implements Valuable {
     private String name;
     private String accountNumber;
     private double balance;
@@ -14,11 +12,11 @@ public class CreditCard implements IValuable {
     }
 
     public void charge(double amount) {
-        this.balance -= amount;
+        this.balance += amount;
     }
 
     public void pay(double amount) {
-        this.balance += amount;
+        this.balance -= amount;
     }
 
     @Override
