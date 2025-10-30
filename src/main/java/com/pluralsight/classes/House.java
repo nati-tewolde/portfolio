@@ -1,5 +1,7 @@
 package com.pluralsight.classes;
 
+import java.time.LocalDate;
+
 public class House extends FixedAsset {
     private int yearBuilt;
     private int squareFeet;
@@ -14,6 +16,8 @@ public class House extends FixedAsset {
 
     @Override
     public double getValue() {
-        return 100.0 * squareFeet;
+        int currentYear = LocalDate.now().getYear();
+        double age = currentYear - yearBuilt;
+        return (100.0 * squareFeet) * (1 - 0.03636 * age);
     }
 }

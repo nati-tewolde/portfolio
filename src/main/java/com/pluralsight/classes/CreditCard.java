@@ -23,7 +23,7 @@ public class CreditCard implements IValuable {
 
     @Override
     public double getValue() {
-        return balance;
+        return -balance;
     }
 
 }
